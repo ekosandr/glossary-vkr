@@ -11,17 +11,17 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import { Container } from "../../styled/styled";
 import { useQuery } from "react-query";
-// import { mindmap } from "../../mockData/dataMindMap";
+import { mindmap } from "../../mockData/dataMindMap";
 
 const fetchMindmapData = async () => (await fetch("/mindmap")).json();
 
 export const MindMap = () => {
-  const {
-    data: mindmapData,
-    isLoading,
-    isError,
-  } = useQuery("mindmap", fetchMindmapData);
-  // const mindmapData = mindmap;
+  // const {
+  //   data: mindmapData,
+  //   isLoading,
+  //   isError,
+  // } = useQuery("mindmap", fetchMindmapData);
+  const mindmapData = mindmap;
   const [nodes, setNodes, onNodesChange] = useNodesState(
     mindmapData?.initialNodes
   );
@@ -41,13 +41,13 @@ export const MindMap = () => {
     }
   }, [mindmapData, setEdges, setNodes]);
 
-  if (isLoading) {
-    return <div>Loading mindmap...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading mindmap...</div>;
+  // }
 
-  if (isError) {
-    return <div>Error fetching mindmap data</div>;
-  }
+  // if (isError) {
+  //   return <div>Error fetching mindmap data</div>;
+  // }
 
   return (
     <Container>

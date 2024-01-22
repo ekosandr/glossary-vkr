@@ -134,34 +134,6 @@ export const mindmap = {
       },
       position: { x: 100, y: 100 },
     },
-    // {
-    //   id: "web-workers",
-    //   data: {
-    //     label: "Веб-воркеры",
-    //   },
-    //   position: { x: 450, y: 730 },
-    // },
-    // {
-    //   id: "vue",
-    //   data: {
-    //     label: "Vue",
-    //   },
-    //   position: { x: 0, y: 500 },
-    // },
-    // {
-    //   id: "hydration",
-    //   data: {
-    //     label: "Гидратация",
-    //   },
-    //   position: { x: -80, y: 600 },
-    // },
-    // {
-    //   id: "caching",
-    //   data: {
-    //     label: "Кэширование",
-    //   },
-    //   position: { x: 80, y: 600 },
-    // },
   ],
   initialEdges: [
     {

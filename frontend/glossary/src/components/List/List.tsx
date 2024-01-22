@@ -14,7 +14,7 @@ import {
   grayColor2,
   modalBoxStyle,
 } from "../../styled/styled";
-// import { mock } from "../../mockData/data";
+import { mock } from "../../mockData/data";
 
 const fetchData = async () => (await fetch("/terms")).json();
 
@@ -48,9 +48,9 @@ const Termin: FC<TerminProps> = memo(({ text, definition, onClick }) => {
 });
 
 const DataFetcher: FC = () => {
-  const { data, isLoading, isError } = useQuery("terms", fetchData);
-  const terminsData: TerminInfo = data || {};
-  //   const terminsData: TerminInfo = mock;
+  //   const { data, isLoading, isError } = useQuery("terms", fetchData);
+  //   const terminsData: TerminInfo = data || {};
+  const terminsData = mock;
 
   const [termin, setTermin] = useState<TerminInfo | null>(null);
 
@@ -62,13 +62,13 @@ const DataFetcher: FC = () => {
     setTermin(null);
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  //   if (isLoading) {
+  //     return <div>Loading...</div>;
+  //   }
 
-  if (isError) {
-    return <div>Error fetching data</div>;
-  }
+  //   if (isError) {
+  //     return <div>Error fetching data</div>;
+  //   }
 
   const terminElements = Object.entries(terminsData).map(
     ([term, definition]) => (
