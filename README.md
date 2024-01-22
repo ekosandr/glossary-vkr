@@ -16,7 +16,7 @@ npm run start
 ```
 npm install
 ```
-Подключсить mock данные из файла src/mockData/dataMindMap.tsx
+Подключить mock данные из файла src/mockData/dataMindMap.tsx
 
 И запустить проект 
 ```
