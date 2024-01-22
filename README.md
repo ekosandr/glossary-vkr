@@ -10,21 +10,4 @@ npm install
 npm run start
 ```
 
-### Для работы над фронтенд частью необходимо перейти в папку frontend/glossary:
 
-Установить зависимости 
-```
-npm install
-```
-Подключить mock данные из файла src/mockData/dataMindMap.tsx
-
-И запустить проект 
-```
-npm run dev
-```
-После изменений сделать билд
-```
-npm run build
-```
-
-И довавить папку dist в корень директории backend
